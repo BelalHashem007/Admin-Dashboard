@@ -2,6 +2,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Sriracha';
+    padding: 0;
 }
 .dashboard {
     background-color: #2196F3;
@@ -11,9 +12,6 @@
     grid-template-rows: 80px 270px 100px;
     grid-template-columns: 1fr;
     grid-area: 1/1/3/2;
-}
-.header {
-    border: 1px solid black;
 }
 .main-content {
     background-color: rgba(209, 209, 209, 0.986);
@@ -25,6 +23,7 @@
     height: 100vh;
 }
 .dashboard-title {
+    display: flex;
     padding: 10px;
 }
 .dashboard-title svg {
@@ -45,11 +44,75 @@
     padding-left: 20px;
     display: flex;
 }
-.dashboard-title {
-    display: flex;
-}
 .dashboard-nav p , .dashboard-settings p{
     margin-left: 15px;
     font-size: 1.3rem;
     font-weight: bold;
+}
+.header {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 50px;
+}
+.header .search {
+    display: flex;
+    margin: 15px 0 15px 15px;
+    gap: 10px;
+}
+#search-bar {
+    width: max(100%,150px);
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid #c7c3c3;
+    background-color: #dbdbdb;
+    padding: 5px 0 5px 10px;
+}
+.header .header-info {
+    display: flex;
+    padding-left: 80px;
+    gap: 20px;
+    align-items: center;
+    justify-self: end;
+    margin-right: 80px;
+    padding-top: 5px;
+}
+.header .header-avatar{
+    display: grid;
+    grid-template-columns: 85px 300px;
+    grid-template-rows: 20px 55px ;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+.header-avatar img {
+    grid-area: 1/1/3/2;
+}
+.header-avatar >p:last-child {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.header-btns {
+    justify-self: end;
+    align-self: center;
+    margin-right: 80px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.btn {
+    color: white;
+    background-color: #2196F3;
+    height: 60px;
+    width: 150px;
+    border-radius: 35px;
+    border: none;
+    font-size: 1.1rem;
+}
+.btn:hover {
+    opacity: 0.8;
+    box-shadow: 0 2px 3px black;
+    cursor: pointer;
+}
+button + button {
+    margin-left: 30px;
 }
