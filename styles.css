@@ -4,68 +4,81 @@
     font-family: 'Sriracha';
     padding: 0;
 }
+
 .dashboard {
     background-color: #2196F3;
-    border: 1px solid black;
     color: white;
     display: grid;
     grid-template-rows: 80px 270px 100px;
     grid-template-columns: 1fr;
     grid-area: 1/1/3/2;
 }
+
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
     height: 100vh;
 }
+
 .dashboard-title {
     display: flex;
     padding: 10px;
 }
+
 .dashboard-title svg {
     width: 50px;
     height: 50px;
 }
-.dashboard-title p{
+
+.dashboard-title p {
     font-size: 1.8rem;
     font-weight: bold;
     margin-left: 7px;
 }
-.dashboard-nav svg, .dashboard-settings svg{
+
+.dashboard-nav svg,
+.dashboard-settings svg {
     width: 25px;
     height: 25px;
     margin-top: 5px;
 }
-.dashboard-nav > div, .dashboard-settings > div {
+
+.dashboard-nav>div,
+.dashboard-settings>div {
     padding-left: 20px;
     display: flex;
 }
-.dashboard-nav p , .dashboard-settings p{
+
+.dashboard-nav p,
+.dashboard-settings p {
     margin-left: 15px;
     font-size: 1.3rem;
     font-weight: bold;
 }
+
 .header {
-    border: 1px solid black;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     column-gap: 50px;
 }
+
 .header .search {
     display: flex;
     margin: 15px 0 15px 15px;
     gap: 10px;
 }
+
 #search-bar {
-    width: max(100%,150px);
+    width: max(100%, 150px);
     height: 30px;
     border-radius: 15px;
     border: 1px solid #c7c3c3;
     background-color: #dbdbdb;
     padding: 5px 0 5px 10px;
 }
+
 .header .header-info {
     display: flex;
     padding-left: 80px;
@@ -75,20 +88,24 @@
     margin-right: 80px;
     padding-top: 5px;
 }
-.header .header-avatar{
+
+.header .header-avatar {
     display: grid;
     grid-template-columns: 85px 300px;
-    grid-template-rows: 20px 55px ;
+    grid-template-rows: 20px 55px;
     margin-left: 40px;
     margin-bottom: 10px;
 }
+
 .header-avatar img {
     grid-area: 1/1/3/2;
 }
-.header-avatar >p:last-child {
+
+.header-avatar>p:last-child {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
 .header-btns {
     justify-self: end;
     align-self: center;
@@ -96,6 +113,7 @@
     display: flex;
     flex-wrap: nowrap;
 }
+
 .btn {
     color: white;
     background-color: #2196F3;
@@ -105,23 +123,22 @@
     border: none;
     font-size: 1.1rem;
 }
+
 .btn:hover {
     opacity: 0.8;
     box-shadow: 0 2px 3px black;
     cursor: pointer;
 }
-button + button {
+
+button+button {
     margin-left: 30px;
 }
+
 a {
     color: inherit;
     text-decoration: none;
 }
-.card {
-    background-color: white;
-    border: 2px solid rgba(255, 255, 255, 0.842);
-    border-radius: 3px;
-}
+
 .main-content {
     background-color: rgba(209, 209, 209, 0.986);
     display: grid;
@@ -130,18 +147,21 @@ a {
     gap: 15px;
     padding-left: 15px;
 }
+
 .main-article {
     grid-area: 1/1/3/2;
     display: grid;
     grid-template-rows: 40px 1fr;
     padding: 15px 0 0 5px;
 }
+
 .main-article .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-auto-rows: 200px;
     gap: 20px;
 }
+
 .main-article .cards .card {
     position: relative;
     box-shadow: 1px 1px 2px black;
@@ -149,19 +169,89 @@ a {
     border-width: 8px;
     border-radius: 7px;
     border-style: hidden hidden hidden solid;
-    border-color: white white white orange ;
+    border-color: white white white orange;
+    background-color: white;
 }
+
 .card-img {
     position: absolute;
     right: 0;
     bottom: 15px;
 }
+
 .card-img.favourite {
     right: 125px;
 }
+
 .card-img.seen {
     right: 80px;
-} 
-.card-img.share  {
+}
+
+.card-img.share {
     right: 40px;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+.announcements-article {
+    width: 320px;
+    height: 400px;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.announce-card {
+    padding: 15px;
+    background-color: white;
+    border-radius: 7px;
+
+}
+.announcements-article p {
+    display: block;
+    display: -webkit-box;
+    line-height: 1.3em;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.announcement.first-announce {
+    padding-bottom: 15px;
+}
+
+.announcement h3 {
+    font-size: 1rem;
+}
+
+.announcement p {
+    font-size: 0.8rem;
+}
+.announcement + .announcement{
+    border-style: solid hidden hidden hidden;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.342);
+    padding: 15px 0 15px 0;
+}
+.trending-card {
+    background-color: white;
+    width: 320px;
+    height: 243px;
+    border-radius: 7px;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+.trends {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 20px 1fr;
+    column-gap: 5px;
+}
+.trends img {
+    grid-area: 1/1/3/2;
+}
+.trends + .trends {
+    padding-top: 10px;
 }
